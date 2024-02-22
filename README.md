@@ -1,29 +1,6 @@
 # 🏙 Tokyo Night
 
-A dark and light [Neovim](https://github.com/neovim/neovim) theme written in
-[Lua](https://www.lua.org) ported from the [Visual Studio Code
-TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
-[extra](#-extras) themes for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html),
-[Alacritty](https://github.com/alacritty/alacritty),
-[iTerm](https://iterm2.com/) and
-[Fish](https://fishshell.com/docs/current/index.html).
-
-## Storm
-
-![image](https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png)
-
-## Night
-
-![image](https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png)
-
-## Moon
-
-![image](https://user-images.githubusercontent.com/292349/190951628-10ba28a1-57ff-4479-8eab-47400a402242.png)
-
-## Day
-
-![image](https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png)
-
+A dark Purple [Neovim](https://github.com/neovim/neovim) theme written in [Lua](https://www.lua.org), forked from Folke's Tokyonight.
 ## ✨ Features
 
 - Supports the latest [Neovim](https://github.com/neovim/neovim)
@@ -31,7 +8,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - Enhances terminal colors.
 - Introduces a darker background option for sidebar-like windows.
 - Supports all major plugins.
-- Provides [TokyoNight](https://github.com/folke/tokyonight.nvim)
+- Provides [Purple rain](https://github.com/yashranjan1/purple-rain.nvim)
   [extras](#-extras) for numerous other applications.
 
 ### 🍭 Extras
@@ -73,7 +50,7 @@ Install the theme with your preferred package manager, such as
 
 ```lua
 {
-  "folke/tokyonight.nvim",
+  "yashranjan1/purple-rain.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
@@ -84,20 +61,14 @@ Install the theme with your preferred package manager, such as
 
 ### Vim Script
 
-```vim
-colorscheme tokyonight
-
-" There are also colorschemes for the different styles.
-colorscheme tokyonight-night
-colorscheme tokyonight-storm
-colorscheme tokyonight-day
-colorscheme tokyonight-moon
+```
+colorscheme purple-rain
 ```
 
 ### [Lua](https://www.lua.org)
 
 ```lua
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme purple-rain]]
 ```
 
 #### External Plugins
@@ -108,7 +79,7 @@ vim.cmd[[colorscheme tokyonight]]
 -- Lua
 require('barbecue').setup {
   -- ... your barbecue config
-  theme = 'tokyonight',
+  theme = 'purple-rain',
   -- ... your barbecue config
 }
 ```
@@ -120,7 +91,7 @@ require('barbecue').setup {
 require('lualine').setup {
   options = {
     -- ... your lualine config
-    theme = 'tokyonight'
+    theme = 'purple-rain'
     -- ... your lualine config
   }
 }
@@ -130,12 +101,12 @@ require('lualine').setup {
 
 ```vim
 " Vim Script
-let g:lightline = {'colorscheme': 'tokyonight'}
+let g:lightline = {'colorscheme': 'purple-rain'}
 ```
 
 ## ⚙️ Configuration
 
-> ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme tokyonight`.
+> ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme purple-rain`.
 
 The theme offers four styles: [storm](#storm), [moon](#moon), [night](#night),
 and [day](#day).
@@ -143,11 +114,11 @@ and [day](#day).
 The [day](#day) style is used when `{ style = "day" }` is passed to
 `setup(options)` or when `vim.o.background = "light"`.
 
-[TokyoNight](https://github.com/folke/tokyonight.nvim) uses the default options,
+[purple-rain](https://github.com/yashranjan1/purple-rain.nvim) uses the default options,
 unless `setup` is explicitly called.
 
 ```lua
-require("tokyonight").setup({
+require("purple-rain").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings
   style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
@@ -195,15 +166,15 @@ How the highlight groups are calculated:
    groups.
 
 For default values of `colors` and `highlights`, please consult the
-[storm](extras/lua/tokyonight_storm.lua),
-[moon](extras/lua/tokyonight_moon.lua),
-[night](extras/lua/tokyonight_night.lua), and
-[day](extras/lua/tokyonight_day.lua) themes.
+[storm](extras/lua/purple-rain_storm.lua),
+[moon](extras/lua/purple-rain_moon.lua),
+[night](extras/lua/purple-rain_night.lua), and
+[day](extras/lua/purple-rain_day.lua) themes.
 
 ### Settings and color alteration demonstration
 
 ```lua
-require("tokyonight").setup({
+require("purple-rain").setup({
   -- use the night style
   style = "night",
   -- disable italic for functions
@@ -222,7 +193,7 @@ require("tokyonight").setup({
 ### [Borderless Telescope](https://github.com/nvim-telescope/telescope.nvim/wiki/Gallery#borderless) example
 
 ```lua
-require("tokyonight").setup({
+require("purple-rain").setup({
   on_highlights = function(hl, c)
     local prompt = "#2d3149"
     hl.TelescopeNormal = {
@@ -283,8 +254,8 @@ You can easily use the color palette for other plugins inside your
 [Neovim](https://github.com/neovim/neovim) configuration:
 
 ```lua
-local colors = require("tokyonight.colors").setup() -- pass in any of the config options as explained above
-local util = require("tokyonight.util")
+local colors = require("purple-rain.colors").setup() -- pass in any of the config options as explained above
+local util = require("purple-rain.util")
 
 aplugin.background = colors.bg_dark
 aplugin.my_error = util.lighten(colors.red1, 0.3) -- number between 0 and 1. 0 results in white, 1 results in red1
@@ -299,13 +270,13 @@ generate themes for the different styles.
 
 How to add a new extra template:
 
-1. Create a file like `lua/tokyonight/extra/cool-app.lua`.
+1. Create a file like `lua/purple-rain/extra/cool-app.lua`.
 2. Add the name and output file extension to the `extras` table in
-   `lua/tokyonight/extra/init.lua`.
-3. Run the following command to generate new [extra](#-extras) themes from the tokyonight plugin directory:
+   `lua/purple-rain/extra/init.lua`.
+3. Run the following command to generate new [extra](#-extras) themes from the purple-rain plugin directory:
 
    ```sh
-   nvim --headless "+lua require('tokyonight.extra').setup()" +qa
+   nvim --headless "+lua require('purple-rain.extra').setup()" +qa
    ```
 
 4. Check the newly created themes in the `extra/` directory. Please **DO NOT**
