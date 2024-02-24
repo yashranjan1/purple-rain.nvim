@@ -41,27 +41,82 @@ M.default = {
   Purple200 = hsl(261, 45, 72),
   Purple300 = hsl(261, 60, 70),
   Purple400 = hsl(262, 68, 64),
-  Orange = hsl(35, 100, 64),
-  Turquoise = hsl(180, 65, 81),
-  Lavender = hsl(240, 67, 94),
-  Peach = hsl(28, 100, 86),
-  Mint = hsl(120, 100, 80),
-  Coral = hsl(0, 79, 72),
-  Lilac = hsl(300, 26, 71),
-  Salmon = hsl(17, 100, 74),
-  SkyBlue = hsl(197, 71, 73),
-  Rose = hsl(6, 100, 94),
 
-  -- bg = hsl(253, 85, 5),
-  -- bg_highlight = hsl(253, 85, 15),
-  -- fg = hsl(229, 73, 70),
+  --orange colors
+  Orange50 = hsl(35, 100, 85),
+  Orange100 = hsl(35, 100, 75),
+  Orange200 = hsl(35, 100, 64),
+  Orange300 = hsl(35, 92, 57),
+  Orange400 = hsl(35, 92, 45),
+
+  --turqiouse colors
+  Turquoise50 = hsl(180, 65, 92),
+  Turquoise100 = hsl(180, 65, 84),
+  Turquoise200 = hsl(180, 82, 76),
+  Turquoise300 = hsl(180, 89, 65),
+  Turquoise400 = hsl(185, 100, 40),
+
+  --lavender colors
+  Lavender50 = hsl(240, 67, 94),
+  Lavender100 = hsl(240, 67, 89),
+  Lavender200 = hsl(240, 67, 84),
+  Lavender300 = hsl(240, 50, 76),
+  Lavender400 = hsl(240, 67, 76),
+
+  --peach colors
+  Peach50 = hsl(28, 100, 92),
+  Peach100 = hsl(28, 100, 86),
+  Peach200 = hsl(28, 90, 80),
+  Peach300 = hsl(28, 90, 75),
+  Peach400 = hsl(30, 100, 65),
+
+  --mint colors
+  Mint50 = hsl(120, 100, 92),
+  Mint100 = hsl(120, 100, 87),
+  Mint200 = hsl(120, 100, 80),
+  Mint300 = hsl(125, 100, 70),
+  Mint400 = hsl(130, 100, 50),
+
+  --coral colors
+  Coral50 = hsl(0, 79, 85),
+  Coral100 = hsl(0, 79, 80),
+  Coral200 = hsl(0, 79, 75),
+  Coral300 = hsl(0, 85, 70),
+  Coral400 = hsl(0, 85, 65),
+
+  --lilac colors
+  Lilac50 = hsl(300, 26, 85),
+  Lilac100 = hsl(300, 26, 78),
+  Lilac200 = hsl(300, 26, 71),
+  Lilac300 = hsl(300, 30, 66),
+  Lilac400 = hsl(300, 32, 60),
+
+  --salman colors
+  Salmon50 = hsl(17, 100, 85),
+  Salmon100 = hsl(17, 100, 79),
+  Salmon200 = hsl(17, 100, 73),
+  Salmon300 = hsl(20, 100, 68),
+  Salmon400 = hsl(20, 90, 63),
+
+  --skyblue colors
+  SkyBlue50 = hsl(197, 71, 85),
+  SkyBlue100 = hsl(197, 75, 77),
+  SkyBlue200 = hsl(197, 75, 70),
+  SkyBlue300 = hsl(197, 75, 65),
+  SkyBlue400 = hsl(200, 78, 58),
+
+  --violet colors
+  Voilet50 = hsl(253, 90, 35),
+  Violet100 = hsl(253, 90, 26),
+  Violet200 = hsl(253, 90, 20),
+  Violet300 = hsl(253, 85, 15),
+  Violet400 = hsl(253, 85, 5),
 }
 ---@return ColorScheme
 function M.setup(opts)
   opts = opts or {}
-  local config = require("solarized-osaka.config")
+  local config = require("purple-rain.config")
 
-  -- local style = config.is_day() and config.options.light_style or config.options.style
   local style = "default"
   local palette = M[style] or {}
   if type(palette) == "function" then
