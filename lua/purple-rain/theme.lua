@@ -206,32 +206,32 @@ function M.setup()
         --- Misc
         -- TODO:
         -- ["@comment.documentation"] = { },
-        ["@operator"] = { fg = c.green500 }, -- For any operator: `+`, but also `->` and `*` in C.
+        ["@operator"] = { fg = c.Salmon400 }, -- For any operator: `+`, but also `->` and `*` in C.
 
         --- Punctuation
-        ["@punctuation.delimiter"] = { fg = c.green500 }, -- For delimiters ie: `.`
-        ["@punctuation.bracket"] = { fg = c.orange500 }, -- For brackets and parens.
-        ["@punctuation.special"] = { fg = c.orange500 }, -- For special punctutation that does not fall in the catagories before.
-        ["@punctuation.special.markdown"] = { fg = c.orange500, bold = true },
+        ["@punctuation.delimiter"] = { fg = c.Green400 }, -- For delimiters ie: `.`
+        ["@punctuation.bracket"] = { fg = c.Coral400 }, -- For brackets and parens.
+        ["@punctuation.special"] = { fg = c.Coral400 }, -- For special punctutation that does not fall in the catagories before.
+        ["@punctuation.special.markdown"] = { fg = c.Coral400, bold = true },
 
         --- Literals
-        ["@string.documentation"] = { fg = c.cyan500 },
-        ["@string.regex"] = { fg = c.cyan300 }, -- For regexes.
-        ["@string.escape"] = { fg = c.orange700 }, -- For escape characters within a string.
+        ["@string.documentation"] = { fg = c.Mint300 },
+        ["@string.regex"] = { fg = c.Mint300 }, -- For regexes.
+        ["@string.escape"] = { fg = c.Salmon400 }, -- For escape characters within a string.
 
         --- Functions
-        ["@constructor"] = { fg = c.orange500 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-        ["@parameter"] = { fg = c.orange500 }, -- For parameters of a function.
+        ["@constructor"] = { fg = c.Coral400 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+        ["@parameter"] = { fg = c.Coral400 }, -- For parameters of a function.
         -- TODO:
         -- ["@parameter.builtin"] = {}, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
         --- Keywords
-        ["@keyword"] = { fg = c.green500, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
+        ["@keyword"] = { fg = c.Mint300, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
         -- TODO:
         -- ["@keyword.coroutine"] = { }, -- For keywords related to coroutines.
-        ["@keyword.function"] = { fg = c.green500, style = options.styles.functions }, -- For keywords used to define a fuction.
+        ["@keyword.function"] = { fg = c.Lavender300, style = options.styles.functions }, -- For keywords used to define a fuction.
 
-        ["@label"] = { fg = c.green500 }, -- For labels: `label:` in C and `:label:` in Lua.
+        ["@label"] = { fg = c.Mint400 }, -- For labels: `label:` in C and `:label:` in Lua.
 
         --- Types
         ["@type.builtin"] = { link = "Type" },
@@ -243,24 +243,24 @@ function M.setup()
         ["@variable.builtin"] = { fg = c.orange500 }, -- Variable names that are defined by the languages, like `this` or `self`.
 
         --- Text
-        ["@text.literal.markdown"] = { fg = c.red500 },
-        ["@text.literal.markdown_inline"] = { fg = c.yellow500, bg = c.green900 },
-        ["@text.reference"] = { fg = c.blue500, underline = true },
+        ["@text.literal.markdown"] = { fg = c.Coral400 },
+        ["@text.literal.markdown_inline"] = { fg = c.Yellow400, bg = c.Green400 },
+        ["@text.reference"] = { fg = c.Lavender300, underline = true },
 
-        ["@text.todo.unchecked"] = { fg = c.yellow500 }, -- For brackets and parens.
-        ["@text.todo.checked"] = { fg = c.green500 }, -- For brackets and parens.
-        ["@text.warning"] = { fg = c.yellow900, bg = c.yellow500 },
-        ["@text.danger"] = { fg = c.red900, bg = c.red500 },
+        ["@text.todo.unchecked"] = { fg = c.Yellow400 }, -- For brackets and parens.
+        ["@text.todo.checked"] = { fg = c.Green400 }, -- For brackets and parens.
+        ["@text.warning"] = { fg = c.Orange50, bg = c.Orange400 },
+        ["@text.danger"] = { fg = c.Coral50, bg = c.Coral400 },
 
         ["@text.diff.add"] = { link = "DiffAdd" },
         ["@text.diff.delete"] = { link = "DiffDelete" },
 
-        ["@namespace"] = { fg = c.blue500, style = options.styles.variables },
+        ["@namespace"] = { fg = c.Lavender300, style = options.styles.variables },
 
         -- tsx
-        ["@tag.tsx"] = { fg = c.green500 },
-        ["@constructor.tsx"] = { fg = c.blue500 },
-        ["@tag.delimiter.tsx"] = { fg = c.orange500 },
+        ["@tag.tsx"] = { fg = c.Mint300 },
+        ["@constructor.tsx"] = { fg = c.Lavender300 },
+        ["@tag.delimiter.tsx"] = { fg = c.Orange400 },
 
         -- LSP Semantic Token Groups
         ["@lsp.type.boolean"] = { link = "@boolean" },
@@ -270,7 +270,7 @@ function M.setup()
         ["@lsp.type.enumMember"] = { link = "@constant" },
         ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
         ["@lsp.type.formatSpecifier"] = { link = "@punctuation.special" },
-        ["@lsp.type.interface"] = { fg = c.blue500 },
+        ["@lsp.type.interface"] = { fg = c.Lavender300 },
         ["@lsp.type.keyword"] = { link = "@keyword" },
         ["@lsp.type.namespace"] = { link = "@namespace" },
         ["@lsp.type.number"] = { link = "@number" },
@@ -280,7 +280,7 @@ function M.setup()
         ["@lsp.type.selfKeyword"] = { link = "@variable.builtin" },
         ["@lsp.type.string.rust"] = { link = "@string" },
         ["@lsp.type.typeAlias"] = { link = "@type.definition" },
-        ["@lsp.type.unresolvedReference"] = { undercurl = true, sp = c.error },
+        ["@lsp.type.unresolvedReference"] = { undercurl = true, sp = c.Coral400 },
         ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
         ["@lsp.typemod.class.defaultLibrary"] = { link = "@type.builtin" },
         ["@lsp.typemod.enum.defaultLibrary"] = { link = "@type.builtin" },
@@ -291,211 +291,211 @@ function M.setup()
         ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
         ["@lsp.typemod.operator.injected"] = { link = "@operator" },
         ["@lsp.typemod.string.injected"] = { link = "@string" },
-        ["@lsp.typemod.type.defaultLibrary"] = { fg = c.blue500 },
+        ["@lsp.typemod.type.defaultLibrary"] = { fg = c.Lavender300 },
         ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
         ["@lsp.typemod.variable.injected"] = { link = "@variable" },
         -- NOTE: maybe add these with distinct highlights?
         -- ["@lsp.typemod.variable.globalScope"] (global variables)
 
         -- ts-rainbow
-        rainbowcol1 = { fg = c.red500 },
-        rainbowcol2 = { fg = c.orange500 },
-        rainbowcol3 = { fg = c.yellow500 },
-        rainbowcol4 = { fg = c.green500 },
-        rainbowcol5 = { fg = c.cyan500 },
-        rainbowcol6 = { fg = c.blue500 },
-        rainbowcol7 = { fg = c.magenta500 },
+        rainbowcol1 = { fg = c.Coral400 },
+        rainbowcol2 = { fg = c.Orange300 },
+        rainbowcol3 = { fg = c.Yellow300 },
+        rainbowcol4 = { fg = c.Mint300 },
+        rainbowcol5 = { fg = c.Turquoise300 },
+        rainbowcol6 = { fg = c.Blue400 },
+        rainbowcol7 = { fg = c.Purple400 },
 
         -- ts-rainbow2 (maintained fork)
-        TSRainbowRed = { fg = c.red },
-        TSRainbowOrange = { fg = c.orange },
-        TSRainbowYellow = { fg = c.yellow },
-        TSRainbowGreen = { fg = c.green },
-        TSRainbowBlue = { fg = c.blue },
-        TSRainbowViolet = { fg = c.violet500 },
-        TSRainbowCyan = { fg = c.cyan },
+        TSRainbowRed = { fg = c.Coral400 },
+        TSRainbowOrange = { fg = c.Orange300 },
+        TSRainbowYellow = { fg = c.Yellow300 },
+        TSRainbowGreen = { fg = c.Mint300 },
+        TSRainbowBlue = { fg = c.Blue400 },
+        TSRainbowViolet = { fg = c.Purple400 },
+        TSRainbowCyan = { fg = c.Turquoise300 },
 
         -- rainbow-delimiters
-        RainbowDelimiterRed = { fg = c.red },
-        RainbowDelimiterOrange = { fg = c.orange },
-        RainbowDelimiterYellow = { fg = c.yellow },
-        RainbowDelimiterGreen = { fg = c.green },
-        RainbowDelimiterBlue = { fg = c.blue },
-        RainbowDelimiterViolet = { fg = c.violet },
-        RainbowDelimiterCyan = { fg = c.cyan },
+        RainbowDelimiterRed = { fg = c.Coral400 },
+        RainbowDelimiterOrange = { fg = c.Orange300 },
+        RainbowDelimiterYellow = { fg = c.Yellow300 },
+        RainbowDelimiterGreen = { fg = c.Mint300 },
+        RainbowDelimiterBlue = { fg = c.Blue400 },
+        RainbowDelimiterViolet = { fg = c.Purple400 },
+        RainbowDelimiterCyan = { fg = c.Turquoise300 },
 
         -- LspTrouble
-        TroubleText = { fg = c.base0 },
-        TroubleCount = { fg = c.magenta500 },
-        TroubleNormal = { fg = c.base0 },
+        TroubleText = { fg = c.Lavender300 },
+        TroubleCount = { fg = c.Purple300 },
+        TroubleNormal = { fg = c.Lavender300 },
 
         -- Illuminate
-        illuminatedWord = { bg = c.violet900 },
-        illuminatedCurWord = { bg = c.violet900 },
-        IlluminatedWordText = { bg = c.violet900 },
-        IlluminatedWordRead = { bg = c.magenta900 },
-        IlluminatedWordWrite = { bg = c.magenta900 },
+        illuminatedWord = { bg = c.Lilac400 },
+        illuminatedCurWord = { bg = c.Lilac400 },
+        IlluminatedWordText = { bg = c.Lilac400 },
+        IlluminatedWordRead = { bg = c.Purple400 },
+        IlluminatedWordWrite = { bg = c.Purple400 },
 
         -- diff
-        diffAdded = { fg = c.green500 },
-        diffRemoved = { fg = c.red500 },
-        diffChanged = { fg = c.yellow500 },
-        diffOldFile = { fg = c.violet500 },
-        diffNewFile = { fg = c.orange500 },
-        diffFile = { fg = c.blue500 },
-        diffLine = { fg = c.base01 },
-        diffIndexLine = { fg = c.magenta500 },
+        diffAdded = { fg = c.Mint400 },
+        diffRemoved = { fg = c.Coral400 },
+        diffChanged = { fg = c.Yellow300 },
+        diffOldFile = { fg = c.Purple300 },
+        diffNewFile = { fg = c.Orange300 },
+        diffFile = { fg = c.Lavender300 },
+        diffLine = { fg = c.Violet300 },
+        diffIndexLine = { fg = c.Purple300 },
 
         -- Neogit
-        NeogitBranch = { fg = c.magenta500 },
-        NeogitRemote = { fg = c.violet500 },
-        NeogitHunkHeader = { fg = c.base0, bg = c.base02 },
-        NeogitHunkHeaderHighlight = { fg = c.blue500, bg = c.base02 },
-        NeogitDiffContextHighlight = { fg = c.base00, bg = c.base02 },
-        NeogitDiffDeleteHighlight = { fg = c.red500, bg = c.red900 },
-        NeogitDiffAddHighlight = { fg = c.green500, bg = c.green900 },
+        NeogitBranch = { fg = c.Violet200 },
+        NeogitRemote = { fg = c.Purple300 },
+        NeogitHunkHeader = { fg = c.Blue50, bg = c.Blue400 },
+        NeogitHunkHeaderHighlight = { fg = c.Lavender300, bg = c.Lavender50 },
+        NeogitDiffContextHighlight = { fg = c.Lilac50, bg = c.Violet400 },
+        NeogitDiffDeleteHighlight = { fg = c.Coral50, bg = c.Coral400 },
+        NeogitDiffAddHighlight = { fg = c.Mint50, bg = c.Mint400 },
 
         -- Neotest
-        NeotestPassed = { fg = c.green500 },
-        NeotestRunning = { fg = c.yellow500 },
-        NeotestFailed = { fg = c.red500 },
-        NeotestSkipped = { fg = c.blue500 },
-        NeotestTest = { fg = c.base00 },
-        NeotestNamespace = { fg = c.cyan500 },
-        NeotestFocused = { fg = c.yellow500 },
-        NeotestFile = { fg = c.cyan500 },
-        NeotestDir = { fg = c.blue500 },
-        NeotestBorder = { fg = c.blue500 },
-        NeotestIndent = { fg = c.base00 },
-        NeotestExpandMarker = { fg = c.base0 },
-        NeotestAdapterName = { fg = c.violet500, bold = true },
-        NeotestWinSelect = { fg = c.blue500 },
-        NeotestMarked = { fg = c.blue500 },
-        NeotestTarget = { fg = c.blue500 },
+        NeotestPassed = { fg = c.Mint400 },
+        NeotestRunning = { fg = c.Yellow400 },
+        NeotestFailed = { fg = c.Coral400 },
+        NeotestSkipped = { fg = c.Lavender300 },
+        NeotestTest = { fg = c.Purple400 },
+        NeotestNamespace = { fg = c.Turquoise300 },
+        NeotestFocused = { fg = c.Yellow400 },
+        NeotestFile = { fg = c.SkyBlue300 },
+        NeotestDir = { fg = c.Lavender300 },
+        NeotestBorder = { fg = c.Lavender300 },
+        NeotestIndent = { fg = c.Turquoise300 },
+        NeotestExpandMarker = { fg = c.black },
+        NeotestAdapterName = { fg = c.Purple200, bold = true },
+        NeotestWinSelect = { fg = c.Lavender300 },
+        NeotestMarked = { fg = c.Lavender300 },
+        NeotestTarget = { fg = c.Lavender300 },
         --[[ NeotestUnknown = {}, ]]
 
         -- GitGutter
-        GitGutterAdd = { fg = c.green500 }, -- diff mode: Added line |diff.txt|
-        GitGutterChange = { fg = c.yellow500 }, -- diff mode: Changed line |diff.txt|
-        GitGutterDelete = { fg = c.red500 }, -- diff mode: Deleted line |diff.txt|
-        GitGutterAddLineNr = { fg = c.green500 },
-        GitGutterChangeLineNr = { fg = c.yellow500 },
-        GitGutterDeleteLineNr = { fg = c.red500 },
+        GitGutterAdd = { fg = c.Mint300 }, -- diff mode: Added line |diff.txt|
+        GitGutterChange = { fg = c.Yellow300 }, -- diff mode: Changed line |diff.txt|
+        GitGutterDelete = { fg = c.Coral400 }, -- diff mode: Deleted line |diff.txt|
+        GitGutterAddLineNr = { fg = c.Mint400 },
+        GitGutterChangeLineNr = { fg = c.Yellow400 },
+        GitGutterDeleteLineNr = { fg = c.Coral300 },
 
         -- GitSigns
-        GitSignsAdd = { fg = c.green500 }, -- diff mode: Added line |diff.txt|
-        GitSignsChange = { fg = c.yellow500 }, -- diff mode: Changed line |diff.txt|
-        GitSignsDelete = { fg = c.red500 }, -- diff mode: Deleted line |diff.txt|
+        GitSignsAdd = { fg = c.Mint400 }, -- diff mode: Added line |diff.txt|
+        GitSignsChange = { fg = c.Yellow300 }, -- diff mode: Changed line |diff.txt|
+        GitSignsDelete = { fg = c.Coral400 }, -- diff mode: Deleted line |diff.txt|
 
         -- Telescope
-        TelescopeBorder = { fg = c.base02, bg = c.bg_float },
-        TelescopeNormal = { fg = c.base0, bg = c.bg_float },
+        TelescopeBorder = { fg = c.Lavender300, bg = c.Violet400 },
+        TelescopeNormal = { fg = c.Lavender300, bg = c.Violet400 },
 
         -- NvimTree
-        NvimTreeNormal = { fg = c.base00, bg = c.bg_sidebar },
+        NvimTreeNormal = { fg = c.Lavender300, bg = c.Violet400 },
         NvimTreeWinSeparator = {
-            fg = options.styles.sidebars == "transparent" and c.border or c.bg_sidebar,
-            bg = c.bg_sidebar,
+            fg = options.styles.sidebars == "transparent" and c.Lavender300 or c.Lavender300,
+            bg = c.Violet400,
         },
-        NvimTreeNormalNC = { fg = c.base00, bg = c.bg_sidebar },
-        NvimTreeRootFolder = { fg = c.blue, bold = true },
-        NvimTreeGitDirty = { fg = c.yellow500 },
-        NvimTreeGitNew = { fg = c.green500 },
-        NvimTreeGitDeleted = { fg = c.red500 },
-        NvimTreeOpenedFile = { bg = c.bg_highlight },
-        NvimTreeSpecialFile = { fg = c.violet500, underline = true },
-        NvimTreeIndentMarker = { fg = c.base02 },
-        NvimTreeImageFile = { fg = c.base00 },
-        NvimTreeSymlink = { fg = c.blue },
-        NvimTreeFolderIcon = { bg = c.none, fg = c.blue },
+        NvimTreeNormalNC = { fg = c.Lavender300, bg = c.Violet400 },
+        NvimTreeRootFolder = { fg = c.Lavender300, bold = true },
+        NvimTreeGitDirty = { fg = c.Yellow400 },
+        NvimTreeGitNew = { fg = c.Mint400 },
+        NvimTreeGitDeleted = { fg = c.Coral400 },
+        NvimTreeOpenedFile = { bg = c.Violet400 },
+        NvimTreeSpecialFile = { fg = c.Lilac400, underline = true },
+        NvimTreeIndentMarker = { fg = c.Violet200 },
+        NvimTreeImageFile = { fg = c.Lavender300 },
+        NvimTreeSymlink = { fg = c.Blue400 },
+        NvimTreeFolderIcon = { bg = c.none, fg = c.Lavender300 },
         -- NvimTreeFolderName= { fg = c.fg_float },
 
-        NeoTreeNormal = { fg = c.base00, bg = c.bg_sidebar },
-        NeoTreeNormalNC = { fg = c.base00, bg = c.bg_sidebar },
-        NeoTreeDimText = { fg = c.base01 },
+        NeoTreeNormal = { fg = c.Lavender300, bg = c.Violet400 },
+        NeoTreeNormalNC = { fg = c.Lavender300, bg = c.Violet400 },
+        NeoTreeDimText = { fg = c.Lavender300 },
 
         -- Fern
-        FernBranchText = { fg = c.blue },
+        FernBranchText = { fg = c.Lavender50 },
 
         -- glyph palette
-        GlyphPalette1 = { fg = c.red500 },
-        GlyphPalette2 = { fg = c.green },
-        GlyphPalette3 = { fg = c.yellow },
-        GlyphPalette4 = { fg = c.blue },
-        GlyphPalette6 = { fg = c.cyan },
-        GlyphPalette7 = { fg = c.fg },
-        GlyphPalette9 = { fg = c.red },
+        GlyphPalette1 = { fg = c.Coral400 },
+        GlyphPalette2 = { fg = c.Green400 },
+        GlyphPalette3 = { fg = c.Yellow400 },
+        GlyphPalette4 = { fg = c.Blue400 },
+        GlyphPalette6 = { fg = c.Turquoise200 },
+        GlyphPalette7 = { fg = c.Purple300 },
+        GlyphPalette9 = { fg = c.Coral200 },
 
         -- Dashboard
-        DashboardShortCut = { fg = c.cyan },
-        DashboardHeader = { fg = c.blue },
-        DashboardCenter = { fg = c.magenta },
-        DashboardFooter = { fg = c.yellow, italic = true },
+        DashboardShortCut = { fg = c.Turquoise300 },
+        DashboardHeader = { fg = c.Blue400 },
+        DashboardCenter = { fg = c.Purple400 },
+        DashboardFooter = { fg = c.Yellow400, italic = true },
 
         -- Alpha
-        AlphaShortcut = { fg = c.orange },
-        AlphaHeader = { fg = c.blue },
-        AlphaHeaderLabel = { fg = c.orange },
-        AlphaFooter = { fg = c.cyan },
-        AlphaButtons = { fg = c.cyan },
+        AlphaShortcut = { fg = c.Orange400 },
+        AlphaHeader = { fg = c.Blue400 },
+        AlphaHeaderLabel = { fg = c.Orange400 },
+        AlphaFooter = { fg = c.Turquoise300 },
+        AlphaButtons = { fg = c.Turquoise300 },
 
         -- WhichKey
-        WhichKey = { fg = c.cyan },
-        WhichKeyGroup = { fg = c.blue },
-        WhichKeyDesc = { fg = c.magenta },
-        WhichKeySeperator = { fg = c.base01 },
-        WhichKeySeparator = { fg = c.base01 },
-        WhichKeyFloat = { bg = c.bg_sidebar },
-        WhichKeyValue = { fg = c.violet500 },
+        WhichKey = { fg = c.Lavender300 },
+        WhichKeyGroup = { fg = c.Blue400 },
+        WhichKeyDesc = { fg = c.Green400 },
+        WhichKeySeperator = { fg = c.Lilac50 },
+        WhichKeySeparator = { fg = c.Lilac50 },
+        WhichKeyFloat = { bg = c.Violet400 },
+        WhichKeyValue = { fg = c.SkyBlue300 },
 
         -- LspSaga
         DiagnosticWarning = { link = "DiagnosticWarn" },
         DiagnosticInformation = { link = "DiagnosticInfo" },
 
-        LspFloatWinNormal = { bg = c.bg_float },
-        LspFloatWinBorder = { fg = c.base02 },
-        LspSagaBorderTitle = { fg = c.cyan },
-        LspSagaHoverBorder = { fg = c.blue },
-        LspSagaRenameBorder = { fg = c.green },
-        LspSagaDefPreviewBorder = { fg = c.green },
-        LspSagaCodeActionBorder = { fg = c.blue },
-        LspSagaFinderSelection = { fg = c.base03 },
-        LspSagaCodeActionTitle = { fg = c.cyan },
-        LspSagaCodeActionContent = { fg = c.violet500 },
-        LspSagaSignatureHelpBorder = { fg = c.red },
-        ReferencesCount = { fg = c.violet500 },
-        DefinitionCount = { fg = c.violet500 },
-        DefinitionIcon = { fg = c.blue },
-        ReferencesIcon = { fg = c.blue },
-        TargetWord = { fg = c.cyan500 },
+        LspFloatWinNormal = { bg = c.Violet400 },
+        LspFloatWinBorder = { fg = c.Purple400 },
+        LspSagaBorderTitle = { fg = c.Turquoise200 },
+        LspSagaHoverBorder = { fg = c.Blue400 },
+        LspSagaRenameBorder = { fg = c.Green400 },
+        LspSagaDefPreviewBorder = { fg = c.Green400 },
+        LspSagaCodeActionBorder = { fg = c.Blue400 },
+        LspSagaFinderSelection = { fg = c.Lavender300 },
+        LspSagaCodeActionTitle = { fg = c.Turquoise300 },
+        LspSagaCodeActionContent = { fg = c.Purple400 },
+        LspSagaSignatureHelpBorder = { fg = c.Coral200 },
+        ReferencesCount = { fg = c.Purple400 },
+        DefinitionCount = { fg = c.Purple400 },
+        DefinitionIcon = { fg = c.Blue400 },
+        ReferencesIcon = { fg = c.Blue400 },
+        TargetWord = { fg = c.Turquoise300 },
 
         -- NeoVim
-        healthError = { fg = c.error },
-        healthSuccess = { fg = c.cyan },
-        healthWarning = { fg = c.warning },
+        healthError = { fg = c.Coral400 },
+        healthSuccess = { fg = c.Turquoise200 },
+        healthWarning = { fg = c.Yellow400 },
 
         -- BufferLine
-        BufferLineIndicatorSelected = { fg = c.yellow500 },
+        BufferLineIndicatorSelected = { fg = c.Yellow300 },
 
         -- Barbar
-        BufferCurrent = { bg = c.bg, fg = c.fg },
-        BufferCurrentERROR = { bg = c.bg, fg = c.error },
-        BufferCurrentHINT = { bg = c.bg, fg = c.hint },
-        -- BufferCurrentIcon = { bg = c.bg, fg = c.},
-        BufferCurrentINFO = { bg = c.bg, fg = c.info },
-        BufferCurrentWARN = { bg = c.bg, fg = c.warning },
-        BufferCurrentIndex = { bg = c.bg, fg = c.info },
-        BufferCurrentMod = { bg = c.bg, fg = c.warning },
-        BufferCurrentSign = { bg = c.bg, fg = c.bg },
-        BufferCurrentTarget = { bg = c.bg, fg = c.red },
-        BufferAlternate = { bg = c.base01, fg = c.fg },
-        BufferAlternateERROR = { bg = c.base01, fg = c.error },
-        BufferAlternateHINT = { bg = c.base01, fg = c.hint },
+        BufferCurrent = { bg = c.Violet400, fg = c.Lavender300 },
+        BufferCurrentERROR = { bg = c.Violet400, fg = c.Yellow400 },
+        BufferCurrentHINT = { bg = c.Violet400, fg = c.Green400 },
+        -- BufferCurrentIcon = { bg = c.Violet400, fg = c.},
+        BufferCurrentINFO = { bg = c.Violet400, fg = c.Blue400 },
+        BufferCurrentWARN = { bg = c.Violet400, fg = c.Yellow300 },
+        BufferCurrentIndex = { bg = c.Violet400, fg = c.Blue400 },
+        BufferCurrentMod = { bg = c.Violet400, fg = c.Yellow300 },
+        BufferCurrentSign = { bg = c.Violet400, fg = c.Purple400 },
+        BufferCurrentTarget = { bg = c.Violet400, fg = c.Coral400 },
+        BufferAlternate = { bg = c.Mint400, fg = c.Lavender300 },
+        BufferAlternateERROR = { bg = c.Violet400, fg = c.Coral400 },
+        BufferAlternateHINT = { bg = c.Violet400, fg = c.Green400 },
         -- BufferAlternateIcon = { bg = c.base01, fg = c. },
-        BufferAlternateIndex = { bg = c.base01, fg = c.info },
-        BufferAlternateINFO = { bg = c.base01, fg = c.info },
+        BufferAlternateIndex = { bg = c.base01, fg = c.Blue400 },
+        BufferAlternateINFO = { bg = c.base01, fg = c.Blue400 },
         BufferAlternateMod = { bg = c.base01, fg = c.warning },
-        BufferAlternateSign = { bg = c.base01, fg = c.info },
+        BufferAlternateSign = { bg = c.base01, fg = c.Blue400 },
         BufferAlternateTarget = { bg = c.base01, fg = c.red },
         BufferAlternateWARN = { bg = c.base01, fg = c.warning },
         BufferVisible = { bg = c.bg_statusline, fg = c.fg },
