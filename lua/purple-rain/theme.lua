@@ -80,7 +80,7 @@ function M.setup()
         SpellCap = { sp = c.Pink300, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
         SpellLocal = { sp = c.SkyBlue300, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
         SpellRare = { sp = c.Yellow300, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-        StatusLine = { fg = c.Lilac50, bg = c.Lilac400 }, -- status line of current window
+        StatusLine = { fg = c.Lilac50, bg = c.Violet400 }, -- status line of current window
         StatusLineNC = { fg = c.commentGray, bg = c.Violet400 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
         TabLine = { fg = c.Lilac50, bg = c.Violet400, sp = c.Lilac50 }, -- tab pages line, not active tab page label
         TabLineFill = { fg = c.Lilac50, bg = c.commentGray }, -- tab pages line, where there are no labels
@@ -182,8 +182,8 @@ function M.setup()
         DiagnosticHint = { fg = c.Green400 }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
         DiagnosticUnnecessary = { fg = c.Peach400 }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
 
-        DiagnosticVirtualTextError = { bg = c.Coral400, fg = c.Coral50 }, -- Used for "Error" diagnostic virtual text
-        DiagnosticVirtualTextWarn = { bg = c.Yellow400, fg = c.Yellow50 }, -- Used for "Warning" diagnostic virtual text
+        DiagnosticVirtualTextError = { bg = c.Coral50, fg = c.Coral400 }, -- Used for "Error" diagnostic virtual text
+        DiagnosticVirtualTextWarn = { bg = c.Yellow50, fg = c.Orange400 }, -- Used for "Warning" diagnostic virtual text
         DiagnosticVirtualTextInfo = { bg = c.Blue400, fg = c.Blue50 }, -- Used for "Information" diagnostic virtual text
         DiagnosticVirtualTextHint = { bg = c.Green400, fg = c.Green50 }, -- Used for "Hint" diagnostic virtual text
 
@@ -210,7 +210,7 @@ function M.setup()
 
         --- Punctuation
         ["@punctuation.delimiter"] = { fg = c.Green400 }, -- For delimiters ie: `.`
-        ["@punctuation.bracket"] = { fg = c.Coral400 }, -- For brackets and parens.
+        ["@punctuation.bracket"] = { fg = c.Turquoise50 }, -- For brackets and parens.
         ["@punctuation.special"] = { fg = c.Coral400 }, -- For special punctutation that does not fall in the catagories before.
         ["@punctuation.special.markdown"] = { fg = c.Coral400, bold = true },
 

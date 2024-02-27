@@ -1,4 +1,4 @@
-# 🏙 Tokyo Night
+# ⛈️  Purple Rain
 
 A dark Purple [Neovim](https://github.com/neovim/neovim) theme written in [Lua](https://www.lua.org), forked from Folke's Tokyonight.
 ## ✨ Features
