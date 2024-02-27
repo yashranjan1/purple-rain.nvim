@@ -3,7 +3,7 @@
 A dark Purple [Neovim](https://github.com/neovim/neovim) theme written in [Lua](https://www.lua.org), forked from Folke's Tokyonight.
 ## ✨ Features
 
-![Purple Rain Showcase] (https://raw.githubusercontent.com/yashranjan1/purple-rain.nvim/main/assets/240228_01h49m19s_screenshot.png)
+![Purple Rain Showcase](https://raw.githubusercontent.com/yashranjan1/purple-rain.nvim/main/assets/240228_01h49m19s_screenshot.png)
 
 - Supports the latest [Neovim](https://github.com/neovim/neovim)
   [0.9.0](https://github.com/neovim/neovim/releases/tag/v0.9.0) features.
