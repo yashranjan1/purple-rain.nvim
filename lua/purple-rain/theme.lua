@@ -33,7 +33,7 @@ function M.setup()
         CursorIM = { fg = c.Violet400, bg = c.Lavender300 }, -- like Cursor, but used when in IME mode |CursorIM|
         CursorColumn = { bg = c.Violet300 }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
         CursorLine = { bg = c.Violet300 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-        Directory = { fg = c.Violet300 }, -- directory names (and other special names in listings)
+        Directory = { fg = c.Lavender300 }, -- directory names (and other special names in listings)
         DiffAdd = { fg = c.Green400, bg = c.Violet400, bold = true }, -- diff mode: Added line |diff.txt|
         DiffChange = { fg = c.Yellow400, bg = c.Violet400, bold = true }, -- diff mode: Changed line |diff.txt|
         DiffDelete = { fg = c.Coral400, bg = c.Violet400, bold = true }, -- diff mode: Deleted line |diff.txt|
@@ -105,7 +105,7 @@ function M.setup()
         -- Boolean       = { }, --  a boolean constant: TRUE, false
         -- Float         = { }, --    a floating point constant: 2.3e10
 
-        Identifier = { fg = c.Lavender300, style = options.styles.variables }, -- (preferred) any variable name
+        Identifier = { fg = c.Yellow400, style = options.styles.variables }, -- (preferred) any variable name
         Function = { fg = c.Lavender300, style = options.styles.functions }, -- function name (also: methods for classes)
 
         Statement = { fg = c.Turquoise300 }, -- (preferred) any statement
@@ -398,7 +398,7 @@ function M.setup()
             bg = c.Violet400,
         },
         NvimTreeNormalNC = { fg = c.Lavender300, bg = c.Violet400 },
-        NvimTreeRootFolder = { fg = c.Lavender300, bold = true },
+        NvimTreeRootFolder = { fg = c.Lavender30Lavender3000, bold = true },
         NvimTreeGitDirty = { fg = c.Yellow400 },
         NvimTreeGitNew = { fg = c.Mint400 },
         NvimTreeGitDeleted = { fg = c.Coral400 },
@@ -407,7 +407,7 @@ function M.setup()
         NvimTreeIndentMarker = { fg = c.Violet200 },
         NvimTreeImageFile = { fg = c.Lavender300 },
         NvimTreeSymlink = { fg = c.Blue400 },
-        NvimTreeFolderIcon = { bg = c.none, fg = c.Lavender300 },
+        NvimTreeFolderIcon = { bg = c.none, fg = c.Mint100 },
         -- NvimTreeFolderName= { fg = c.fg_float },
 
         NeoTreeNormal = { fg = c.Lavender300, bg = c.Violet400 },
